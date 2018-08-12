@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #004F9F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.webasto.webastoparts.Controller">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #004F9F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.webasto.webastoparts.LoginController">
    <children>
-      <JFXButton fx:id="openLoginButton" alignment="CENTER" graphicTextGap="8.0" layoutY="88.0" onAction="#handleLoginButtonAction" prefHeight="35.0" prefWidth="176.0" text="Přihlášení" textFill="WHITE">
+      <JFXButton fx:id="openLoginButton" alignment="CENTER" graphicTextGap="8.0" layoutY="88.0" onAction="#handleOpenLoginButtonAction" prefHeight="35.0" prefWidth="176.0" text="Přihlášení" textFill="WHITE">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -95,7 +95,7 @@
                </image>
             </ImageView>
             <JFXPasswordField focusColor="#004f9f" layoutX="45.0" layoutY="317.0" prefHeight="27.0" prefWidth="361.0" promptText="Heslo" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="320.0" />
-            <JFXButton fx:id="loginButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="8.0" layoutX="186.0" layoutY="396.0" prefHeight="70.0" prefWidth="50.0" ripplerFill="WHITE" AnchorPane.bottomAnchor="40.0">
+            <JFXButton fx:id="loginButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="8.0" layoutX="186.0" layoutY="396.0" onAction="#handleLoginButtonAction" prefHeight="70.0" prefWidth="50.0" ripplerFill="WHITE" AnchorPane.bottomAnchor="40.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

@@ -1,22 +1,24 @@
 package com.webasto.webastoparts;
 
 import com.jfoenix.controls.JFXButton;
-import static com.sun.corba.se.impl.util.Utility.printStackTrace;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-public class Controller implements Initializable {
-    
+public class LoginController implements Initializable {
+    private Stage stage;
     @FXML
     private Label label;
     
@@ -37,11 +39,25 @@ public class Controller implements Initializable {
         settingsPane.setVisible(true);
     }
     @FXML
-    private void handleLoginButtonAction(ActionEvent event) {
+    private void handleOpenLoginButtonAction(ActionEvent event) {
         loginPane.setVisible(true);
         settingsPane.setVisible(false);
     }
-    
+    @FXML
+    private void handleLoginButtonAction(ActionEvent event) throws IOException{
+        //try {
+        stage = (Stage) loginButton.getScene().getWindow();
+        stage.setTitle("Správa materiálů");
+        Parent root;
+        root = (Parent) FXMLLoader.load(getClass().getResource("/fxml/MaterialScene.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/styles/Styles.css");
+        stage.setScene(scene);
+        
+        //} catch(Exception e) {
+          // e.printStackTrace();
+          //}
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -56,6 +72,9 @@ public class Controller implements Initializable {
          });
              
     } 
+    
+    
+
     
     
 //    

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #004F9F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.webasto.webastoparts.MaterialController">
+   <children>
+      <JFXButton fx:id="openLoginButton" alignment="CENTER" graphicTextGap="8.0" layoutY="88.0" prefHeight="35.0" prefWidth="176.0" text="Přihlášení" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE" size="24.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="openSettingButton" alignment="CENTER" layoutY="439.0" prefHeight="35.0" prefWidth="176.0" text="Nastavení" textFill="WHITE" AnchorPane.bottomAnchor="45.0">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" size="23.0" />
+         </graphic>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+      </JFXButton>
+   </children>
+</AnchorPane>
