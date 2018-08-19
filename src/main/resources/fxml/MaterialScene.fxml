@@ -3,11 +3,27 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #004F9F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.webasto.webastoparts.MaterialController">
    <children>
-      <JFXButton fx:id="openLoginButton" alignment="CENTER" graphicTextGap="8.0" layoutY="88.0" prefHeight="35.0" prefWidth="176.0" text="Přihlášení" textFill="WHITE">
+      <AnchorPane fx:id="mainPane" layoutX="185.0" prefHeight="500.0" prefWidth="615.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="backgroundImage" fitHeight="623.0" fitWidth="375.0" layoutX="424.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../images/background.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footer" fitHeight="24.0" fitWidth="615.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@../images/Webasto_footer.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="opensearchButton" graphicTextGap="10.0" layoutY="88.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="185.0" text="Hledat" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="85.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -15,16 +31,38 @@
             <Insets right="25.0" />
          </padding>
          <graphic>
-            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE" size="24.0" />
+            <MaterialDesignIconView fill="WHITE" glyphName="MAGNIFY" size="24.0" />
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="openSettingButton" alignment="CENTER" layoutY="439.0" prefHeight="35.0" prefWidth="176.0" text="Nastavení" textFill="WHITE" AnchorPane.bottomAnchor="45.0">
+      <JFXButton fx:id="openSettingButton" graphicTextGap="10.0" layoutY="439.0" prefHeight="35.0" prefWidth="185.0" text="Nastavení" textFill="WHITE" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0">
          <graphic>
             <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" size="23.0" />
          </graphic>
          <padding>
             <Insets right="25.0" />
          </padding>
+      </JFXButton>
+      <JFXButton fx:id="opensearchButton1" graphicTextGap="10.0" layoutY="131.0" prefHeight="35.0" prefWidth="185.0" text="Přidat" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="135.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="PLUS_CIRCLE_OUTLINE" size="22.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="opensearchButton11" graphicTextGap="10.0" layoutY="175.0" prefHeight="35.0" prefWidth="185.0" text="Tisk" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="185.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="PRINTER" size="22.0" />
+         </graphic>
       </JFXButton>
    </children>
 </AnchorPane>
