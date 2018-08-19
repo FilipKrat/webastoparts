@@ -29,6 +29,9 @@ public class MaterialController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println(backgroundImage.getFitHeight());
+        final double SHAPE = backgroundImage.getFitHeight()/backgroundImage.getFitWidth();
+        
         mainPane.widthProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
@@ -39,6 +42,7 @@ public class MaterialController implements Initializable{
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 backgroundImage.setFitHeight(newValue.doubleValue());   
+                backgroundImage.setFitWidth(SHAPE*newValue.doubleValue());
             }
          });
         }
