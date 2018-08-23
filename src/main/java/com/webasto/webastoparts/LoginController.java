@@ -18,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
+
     private Stage stage;
     @FXML
     private Label label;
@@ -30,7 +31,7 @@ public class LoginController implements Initializable {
     @FXML
     private JFXButton loginButton, openLoginButton, openSettingButton, loadButton, settingsButton;
     
-     @FXML
+    @FXML
     private AnchorPane loginPane, settingsPane;
     
     @FXML
@@ -38,26 +39,31 @@ public class LoginController implements Initializable {
         loginPane.setVisible(false);
         settingsPane.setVisible(true);
     }
+
     @FXML
     private void handleOpenLoginButtonAction(ActionEvent event) {
         loginPane.setVisible(true);
         settingsPane.setVisible(false);
     }
+
     @FXML
-    private void handleLoginButtonAction(ActionEvent event) throws IOException{
+    private void handleLoginButtonAction(ActionEvent event) throws IOException {
         //try {
         stage = (Stage) loginButton.getScene().getWindow();
-        stage.setTitle("Správa materiálů");
+        stage.setTitle("Webasto Parts - Správa materiálů");
+        stage.setMinHeight(520);
+        stage.setMinWidth(800);
         Parent root;
         root = (Parent) FXMLLoader.load(getClass().getResource("/fxml/MaterialScene.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         stage.setScene(scene);
-        
+
         //} catch(Exception e) {
-          // e.printStackTrace();
-          //}
+        // e.printStackTrace();
+        //}
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -66,17 +72,13 @@ public class LoginController implements Initializable {
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 footer.setFitWidth(newValue.doubleValue());
                 settingfooter.setFitWidth(newValue.doubleValue());
-                loginButton.setLayoutX((newValue.doubleValue()/2.0)-39.0); //39 - button_size/2 - not possible to count dynamically, setting after init
-                settingsButton.setLayoutX((newValue.doubleValue()/2.0)-39.0);
+                loginButton.setLayoutX((newValue.doubleValue() / 2.0) - 39.0); //39 - button_size/2 - not possible to count dynamically, setting after init
+                settingsButton.setLayoutX((newValue.doubleValue() / 2.0) - 39.0);
             }
-         });
-             
-    } 
-    
-    
+        });
+        
+    }
 
-    
-    
 //    
 //    public void showLogo() {
 //    try {
@@ -96,5 +98,4 @@ public class LoginController implements Initializable {
 //        printStackTrace();
 //    }
 //}
-
 }

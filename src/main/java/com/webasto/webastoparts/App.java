@@ -17,6 +17,8 @@ public class App extends Application {
         scene.getStylesheets().add("/styles/Styles.css");
         stage.setTitle("Webasto Parts - Přihlášení");
         stage.setScene(scene);
+        stage.setMinHeight(520);
+        stage.setMinWidth(800);
         stage.show();
     }
 

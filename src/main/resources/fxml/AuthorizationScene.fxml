@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="337.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.webasto.webastoparts.LoginController">
+   <children>
+      <AnchorPane fx:id="loginPane" prefHeight="442.0" prefWidth="450.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="logo" cache="true" cacheHint="QUALITY" disable="true" fitHeight="74.0" fitWidth="214.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../images/Webasto_logo.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="loginButton" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="170.0" layoutY="271.0" onAction="#handleLoginButtonAction" prefHeight="46.0" prefWidth="115.0" ripplerFill="#ffffff00" style="-fx-background-color: #004f9f;" text="Potvrdit" textFill="WHITE" AnchorPane.bottomAnchor="20.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ARROW_RIGHT_BOLD_CIRCLE_OUTLINE" size="24" textOrigin="CENTER" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Shadow />
+               </effect>
+            </JFXButton>
+            <ImageView fx:id="footer" cache="true" cacheHint="QUALITY" disable="true" fitHeight="19.0" fitWidth="450.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.7446808815002441" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@../images/Webasto_footer.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="47.0" layoutY="125.0" prefHeight="27.0" prefWidth="361.0" text="Autorizace přítupu" textFill="#004f9f" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField alignment="CENTER" layoutX="45.0" layoutY="183.0" prefHeight="27.0" prefWidth="361.0" promptText="Heslo pro autorizaci..." />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

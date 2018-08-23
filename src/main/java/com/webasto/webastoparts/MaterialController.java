@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -25,7 +26,7 @@ public class MaterialController implements Initializable {
     private ImageView searchFooter, searchBackgroundImage, addFooter, addBackgroundImage, filterFooter, filterBackgroundImage, printFooter, printBackgroundImage, settingFooter, settingBackgroundImage, materialImage;
 
     @FXML
-    private AnchorPane allMaterialsPane, addMaterialpane;
+    private AnchorPane allMaterialsPane, addMaterialPane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -56,6 +57,16 @@ public class MaterialController implements Initializable {
                 settingBackgroundImage.setFitWidth(SHAPE * newValue.doubleValue());
             }
         });
+    }
+    @FXML
+    private void handleOpenSearchButtonAction(ActionEvent event) {
+        allMaterialsPane.setVisible(true);
+        addMaterialPane.setVisible(false);
+    }
+    @FXML
+    private void handleOpenAddButtonAction(ActionEvent event) {
+        allMaterialsPane.setVisible(false);
+        addMaterialPane.setVisible(true);
     }
 
 }
