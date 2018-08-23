@@ -19,32 +19,43 @@ import javafx.stage.Stage;
  *
  * @author FilipKrat
  */
-public class MaterialController implements Initializable{
-    
-@FXML
-    private ImageView footer, backgroundImage;
-    
-@FXML
-    private AnchorPane mainPane;
+public class MaterialController implements Initializable {
+
+    @FXML
+    private ImageView searchFooter, searchBackgroundImage, addFooter, addBackgroundImage, filterFooter, filterBackgroundImage, printFooter, printBackgroundImage, settingFooter, settingBackgroundImage, materialImage;
+
+    @FXML
+    private AnchorPane allMaterialsPane, addMaterialpane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println(backgroundImage.getFitHeight());
-        final double SHAPE = backgroundImage.getFitHeight()/backgroundImage.getFitWidth();
-        
-        mainPane.widthProperty().addListener(new ChangeListener<Number>() {
+        final double SHAPE = searchBackgroundImage.getFitHeight() / searchBackgroundImage.getFitWidth();
+
+        allMaterialsPane.widthProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                footer.setFitWidth(newValue.doubleValue());   
+                searchFooter.setFitWidth(newValue.doubleValue());
+                addFooter.setFitWidth(newValue.doubleValue());
+                filterFooter.setFitWidth(newValue.doubleValue());
+                printFooter.setFitWidth(newValue.doubleValue());
+                settingFooter.setFitWidth(newValue.doubleValue());
             }
-         });
-        mainPane.heightProperty().addListener(new ChangeListener<Number>() {
+        });
+        allMaterialsPane.heightProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                backgroundImage.setFitHeight(newValue.doubleValue());   
-                backgroundImage.setFitWidth(SHAPE*newValue.doubleValue());
+                searchBackgroundImage.setFitHeight(newValue.doubleValue());
+                searchBackgroundImage.setFitWidth(SHAPE * newValue.doubleValue());
+                addBackgroundImage.setFitHeight(newValue.doubleValue());
+                addBackgroundImage.setFitWidth(SHAPE * newValue.doubleValue());
+                filterBackgroundImage.setFitHeight(newValue.doubleValue());
+                filterBackgroundImage.setFitWidth(SHAPE * newValue.doubleValue());
+                printBackgroundImage.setFitHeight(newValue.doubleValue());
+                printBackgroundImage.setFitWidth(SHAPE * newValue.doubleValue());
+                settingBackgroundImage.setFitHeight(newValue.doubleValue());
+                settingBackgroundImage.setFitWidth(SHAPE * newValue.doubleValue());
             }
-         });
-        }
-    
+        });
+    }
+
 }
