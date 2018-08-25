@@ -26,7 +26,7 @@ public class MaterialController implements Initializable {
     private ImageView searchFooter, searchBackgroundImage, addFooter, addBackgroundImage, filterFooter, filterBackgroundImage, printFooter, printBackgroundImage, settingFooter, settingBackgroundImage, materialImage;
 
     @FXML
-    private AnchorPane allMaterialsPane, addMaterialPane;
+    private AnchorPane allMaterialsPane, addMaterialPane, settingsPane, filterPane, printPane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -62,11 +62,26 @@ public class MaterialController implements Initializable {
     private void handleOpenSearchButtonAction(ActionEvent event) {
         allMaterialsPane.setVisible(true);
         addMaterialPane.setVisible(false);
+        settingsPane.setVisible(false);
+        filterPane.setVisible(false);
+        printPane.setVisible(false);
     }
     @FXML
     private void handleOpenAddButtonAction(ActionEvent event) {
         allMaterialsPane.setVisible(false);
         addMaterialPane.setVisible(true);
+        settingsPane.setVisible(false);
+        filterPane.setVisible(false);
+        printPane.setVisible(false);
+    }
+    
+     @FXML
+    private void handleOpenSettingsButtonAction(ActionEvent event) {
+        allMaterialsPane.setVisible(false);
+        addMaterialPane.setVisible(false);
+        settingsPane.setVisible(true);
+        filterPane.setVisible(false);
+        printPane.setVisible(false);
     }
 
 }
