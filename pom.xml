@@ -16,7 +16,7 @@
 
     <organization>
         <!-- Used as the 'Vendor' for JNLP generation -->
-        <name>Your Organisation</name>
+        <name>Webasto</name>
     </organization>
 
     <build>
@@ -102,6 +102,7 @@
                     </additionalClasspathElements>
                 </configuration>
             </plugin>
+            
         </plugins>
     </build>
     <dependencies>
