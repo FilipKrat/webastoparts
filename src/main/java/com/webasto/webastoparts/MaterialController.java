@@ -84,4 +84,12 @@ public class MaterialController implements Initializable {
         printPane.setVisible(false);
     }
 
+    @FXML
+    private void handleOpenPrintButtonAction(ActionEvent event) {
+        allMaterialsPane.setVisible(false);
+        addMaterialPane.setVisible(false);
+        settingsPane.setVisible(false);
+        filterPane.setVisible(false);
+        printPane.setVisible(true);
+    }
 }

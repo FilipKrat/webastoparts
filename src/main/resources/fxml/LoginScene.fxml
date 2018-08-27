@@ -7,7 +7,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -127,13 +126,9 @@
                <children>
                   <StackPane prefHeight="90.0" prefWidth="70.0">
                      <children>
-                        <Circle fill="TRANSPARENT" radius="10.0" stroke="#004f9f" strokeType="INSIDE" strokeWidth="3.0" style="-fx-stroke-dash-array: 10;">
-                           <effect>
-                              <Glow />
-                           </effect>
-                        </Circle>
-                        <Circle fill="TRANSPARENT" radius="20.0" stroke="#e00813" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 15;" />
-                        <Circle fill="TRANSPARENT" radius="35.0" stroke="#004f9f" strokeType="INSIDE" strokeWidth="7.0" style="-fx-stroke-dash-array: 22;" />
+                        <Circle fx:id="c1" cache="true" fill="TRANSPARENT" radius="10.0" stroke="#004f9f" strokeType="INSIDE" strokeWidth="3.0" style="-fx-stroke-dash-array: 10;" />
+                        <Circle fx:id="c2" cache="true" fill="TRANSPARENT" radius="20.0" stroke="#e00813" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 15;" />
+                        <Circle fx:id="c3" cache="true" fill="TRANSPARENT" radius="35.0" stroke="#004f9f" strokeType="INSIDE" strokeWidth="7.0" style="-fx-stroke-dash-array: 22;" />
                      </children>
                   </StackPane>
                </children>

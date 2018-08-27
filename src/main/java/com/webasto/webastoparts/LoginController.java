@@ -54,7 +54,7 @@ public class LoginController implements Initializable {
     private void handleOpenLoginButtonAction(ActionEvent event) {
         
         loginPane.setVisible(true);
-        settingsPane.setVisible(false);
+        settingsPane.setVisible(false);     
     }
 
     @FXML
@@ -62,9 +62,10 @@ public class LoginController implements Initializable {
         //try {
         loginButton.setVisible(false);
         loadingCircle.setVisible(true);
+        loadingCircle.toFront();
         new Thread(new Rotations()).start();
         
-        Stage stage = new Stage();//;
+        Stage stage = (Stage)loginButton.getScene().getWindow();
         stage.setTitle("Webasto Parts - Správa materiálů");
         stage.setMinHeight(520);
         stage.setMinWidth(800);
@@ -77,11 +78,12 @@ public class LoginController implements Initializable {
         //} catch(Exception e) {
         // e.printStackTrace();
         //}
+        
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        
         loginPane.widthProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
