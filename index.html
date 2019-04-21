@@ -1,0 +1,125 @@
+<link href='https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text' rel='stylesheet'>
+<script type="text/javascript" src="code39.js"></script>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin: 10px;}
+.tg td{font-family:Arial, sans-serif;font-size:12px;font-weight:bold;padding:2.5px 2.5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:12px;font-weight:bold;padding:2.5px 2.5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:center; height:25px;}
+.tg .tg-0lax-barcode{padding:1px;font-size: 22px;font-weight:normal;text-align:center;vertical-align:text-bottom; height:25px}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 550px; ">
+<colgroup>
+<col style="width: 20px">
+<col style="width: 20px">
+<col style="width: 20px">
+<col style="width: 20px">
+<col style="width: 20px">
+<col style="width: 20px">
+<col style="width: 20px">
+<col style="width: 225px">
+<col style="width: 45px">
+<col style="width: 45px">
+<col style="width: 45px">
+<col style="width: 125px">
+<col style="width: 25px">
+</colgroup>
+  <tr>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax" rowspan="2"></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">MIN:</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">cont.</th>
+    <th class="tg-0lax" rowspan="4"></th>
+    <th class="tg-0lax" rowspan="4"></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax" ></td>
+    <td class="tg-0lax" >MAX:</td>
+    <td class="tg-0lax" ></td>
+    <td class="tg-0lax" >cont.</td>
+  </tr>
+  
+  <tr>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" style="font-size: 10px">Per PU:</td>
+    <td class="tg-0lax" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax-barcode" colspan="3" ><div id="externalbox" style="height:10px; width: 120px; margin-left:5px;">
+<div id="inputdata" >1754403A</div>
+</div></td>
+  </tr>
+</table>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 550px">
+<colgroup>
+<col style="width: 140px">
+<col style="width: 225px">
+<col style="width: 45px">
+<col style="width: 45px">
+<col style="width: 45px">
+<col style="width: 125px">
+<col style="width: 25px">
+</colgroup>
+  <tr>
+    <th class="tg-0lax" rowspan="4">
+    <div id="externalbox" style="height:50px; width: 120px; margin-left:5px;">
+<div id="inputdata2" >150</div>
+</div></th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">MIN:</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">cont.</th>
+    <th class="tg-0lax" rowspan="4"></th>
+    <th class="tg-0lax" rowspan="4"></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax" ></td>
+    <td class="tg-0lax" >MAX:</td>
+    <td class="tg-0lax" ></td>
+    <td class="tg-0lax" >cont.</td>
+  </tr>
+  
+  <tr>
+    <td class="tg-0lax" rowspan="2"></td>
+    <td class="tg-0lax" style="font-size: 10px">Per PU:</td>
+    <td class="tg-0lax" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax-barcode" colspan="3" ><div id="externalbox" style="height:10px; width: 120px; margin-left:5px;">
+<div id="inputdata1" >1754403A</div>
+</div></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+  function get_object(id) {
+   var object = null;
+   if (document.layers) {
+    object = document.layers[id];
+   } else if (document.all) {
+    object = document.all[id];
+   } else if (document.getElementById) {
+    object = document.getElementById(id);
+   }
+   return object;
+  }
+get_object("inputdata").innerHTML=DrawCode39Barcode(get_object("inputdata").innerHTML,0,3,0.4);
+get_object("inputdata1").innerHTML=DrawCode39Barcode(get_object("inputdata1").innerHTML,0,3,0.4);
+get_object("inputdata2").innerHTML=DrawCode39Barcode(get_object("inputdata2").innerHTML,0,2,1.5);
+/* ]]> */
+</script>

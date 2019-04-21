@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #004F9F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.webasto.webastoparts.SplashController">
+   <children>
+      <AnchorPane fx:id="loginPane" layoutX="175.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="logo" cache="true" cacheHint="QUALITY" disable="true" fitHeight="74.0" fitWidth="214.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../images/Webasto_logo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footer" cache="true" cacheHint="QUALITY" disable="true" fitHeight="19.0" fitWidth="450.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.7446808815002441" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@../images/Webasto_footer.png" />
+               </image>
+            </ImageView>
+            <HBox fx:id="loadingCircle" alignment="CENTER" layoutX="180.0" layoutY="380.0" prefHeight="90.0" prefWidth="90.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="330.0">
+               <children>
+                  <StackPane prefHeight="90.0" prefWidth="70.0">
+                     <children>
+                        <Circle fx:id="c1" cache="true" fill="TRANSPARENT" radius="10.0" stroke="#004f9f" strokeType="INSIDE" strokeWidth="3.0" style="-fx-stroke-dash-array: 10;" />
+                        <Circle fx:id="c2" cache="true" fill="TRANSPARENT" radius="20.0" stroke="#e00813" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 15;" />
+                        <Circle fx:id="c3" cache="true" fill="TRANSPARENT" radius="35.0" stroke="#004f9f" strokeType="INSIDE" strokeWidth="7.0" style="-fx-stroke-dash-array: 22;" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="206.0" prefHeight="27.0" prefWidth="361.0" text="Vítejte" textFill="#004f9f">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
